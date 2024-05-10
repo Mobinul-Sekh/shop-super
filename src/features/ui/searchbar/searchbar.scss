@@ -1,0 +1,17 @@
+.search-input {
+  width: 70%;
+  height: 40px;
+  border-radius: 20px;
+  text-indent: 30px;
+  font-size: 17px;
+}
+
+.search-input::placeholder {
+  font-size: 17px;
+  text-align: center;
+}
+
+.search-icon {
+  position: relative;
+  left: 26px;
+}

@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  justify-content: center;
+}
+
+.card-image-basic {
+  position: relative;
+  border-radius: 3rem;
+}
+
+.-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 50%;
+  height: 10rem;
+}
+
+.card-content-title {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  font-size: 40px;
+}
+
+.card-content-desc {
+  margin-top: 0px;
+}
+
+.square-card {
+  width: 15%;
+  height: 15rem;
+}
+
+.vertical-card {
+  width: 20%;
+  height: 50rem;
+}
+
+.horizontal-card {
+  width: 50%;
+  height: 10rem;
+}
+
+.square-card-content {
+  font-weight: 600;
+  padding-top: 7rem;
+}
+
+.horizontal-card-content {
+  font-weight: 600;
+}
+
+.vertical-card-content {
+  font-weight: 600;
+  padding-top: 40rem;
+}

@@ -1,0 +1,86 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-icon {
+  color: white;
+}
+
+// /* BUTTONS */
+.basic-button {
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  gap: 5px;
+  border-radius: 3rem;
+}
+
+.basic-button:hover {
+  animation: boing 600ms ease-in-out !important;
+}
+
+/*COLORS*/
+.gray {
+  background-color: #dddcdc;
+  border: 1px solid #dddcdc;
+}
+.green {
+  background-color: rgb(35, 105, 35);
+  border: 1px solid rgb(35, 105, 35);
+}
+.blue {
+  background-color: rgb(47, 47, 180);
+  border: 1px solid rgb(47, 47, 180);
+}
+.orange {
+  background-color: orange;
+  border: 1px solid orange;
+}
+.red {
+  background-color: rgb(253, 49, 49);
+  border: 1px solid rgb(253, 49, 49);
+}
+.outlined-blue {
+  background-color: transparent;
+  border: 1px solid rgb(47, 47, 180);
+  color: rgb(47, 47, 180);
+}
+
+// /*SIZES*/
+.small {
+  width: 2%;
+}
+.medium {
+  gap: 7px;
+  width: 4%;
+}
+.large {
+  gap: 9px;
+  width: 6%;
+}
+
+/*ANIMATION*/
+@keyframes boing {
+  15%,
+  40%,
+  75%,
+  100% {
+    transform-origin: center center;
+  }
+  15% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(0.9, 0.9);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
