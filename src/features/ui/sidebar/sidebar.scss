@@ -12,11 +12,12 @@
   background-color: red;
   width: 15%;
   height: 100vh;
+  transition: width 0.1s ease-out;
 
   > .brand-name {
     padding: 15px;
     color: white;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   > ul {
@@ -30,8 +31,6 @@
     > li {
       padding: 10px;
       font-size: 1.2rem;
-      background-color: yellow;
-      border-radius: 20px;
 
       > p {
         display: inline-block;
@@ -50,4 +49,31 @@
       font-size: large;
     }
   }
+}
+
+.sidebar-shrink {
+  width: 5%;
+
+  > .brand-logo {
+    padding: 20px 0 15px 0;
+    color: white;
+  }
+
+  > ul {
+    padding-left: 7px;
+
+    > li {
+      padding: 10px 0 10px 3px;
+      text-align: center;
+    }
+  }
+}
+
+.select-option {
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+.select-option-shrink {
+  border-radius: 10px;
 }
