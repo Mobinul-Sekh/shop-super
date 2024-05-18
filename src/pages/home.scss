@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding: 0;
+  box-shadow: 5px 5px 8px rgb(209, 207, 207);
+}
+
+.home-flex-container {
+  display: flex;
+
+  > .column-flex {
+    margin-left: 6rem;
+  }
+  
+  .top-bar {
+    display: flex;
+    margin-top: 30px;
+
+    > .search-bar {
+      flex-grow: 1;
+    }
+
+    > .top-button {
+      margin-right: 10px;
+    }
+
+    > .profile-avatar {
+      margin-right: 20px;
+    }
+  }
+
+  .secondary-top-bar {
+    margin: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    > .page-heading {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    > .middle-three-button {
+      display: flex;
+    }
+  }
+}
+
+.page-elements {
+  display: flex;
+  gap: 20px;
+  margin: 40px 20px;
+
+  > .left-container {
+    flex: 1;
+
+    > .left-container-first-section {
+      margin-bottom: 20px;
+
+      > :first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    > .left-container-second-section {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  > .right-container {
+    flex: 1;
+
+    > .right-container-first-section {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

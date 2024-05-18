@@ -6,6 +6,9 @@
 }
 
 .sidebar {
+  z-index: 1;
+  position: fixed;
+  margin-right: 10rem;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -15,6 +18,7 @@
   transition: width 0.1s ease-out;
 
   > .brand-name {
+    cursor: pointer;
     padding: 15px;
     color: white;
     font-weight: 800;
@@ -55,6 +59,7 @@
   width: 5%;
 
   > .brand-logo {
+    cursor: pointer;
     padding: 20px 0 15px 0;
     color: white;
   }

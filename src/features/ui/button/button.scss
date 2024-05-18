@@ -13,10 +13,12 @@
   display: flex;
   justify-content: center;
   color: black;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 2rem;
   cursor: pointer;
   gap: 5px;
   border-radius: 3rem;
+  height: 40px;
+  box-shadow: 2px 2px 2px rgb(236, 234, 234); 
 }
 
 .basic-button:hover {
@@ -25,8 +27,7 @@
 
 /*COLORS*/
 .gray {
-  background-color: #dddcdc;
-  border: 1px solid #dddcdc;
+  background-color: #f0efef;
 }
 .green {
   background-color: rgb(35, 105, 35);
@@ -52,15 +53,17 @@
 
 // /*SIZES*/
 .small {
-  width: 2%;
+  width: 2rem;
 }
 .medium {
   gap: 7px;
-  width: 4%;
+  width: 6rem;
 }
 .large {
   gap: 9px;
-  width: 6%;
+  width: 8rem;
+  font-size: large;
+  padding-top: 0.6rem;
 }
 
 /*ANIMATION*/

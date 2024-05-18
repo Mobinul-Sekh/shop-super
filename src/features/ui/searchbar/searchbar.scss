@@ -1,9 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
 .search-input {
   width: 70%;
   height: 40px;
   border-radius: 20px;
   text-indent: 30px;
   font-size: 17px;
+  box-shadow: 2px 2px 2px rgb(236, 234, 234);
 }
 
 .search-input::placeholder {

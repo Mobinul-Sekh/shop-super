@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.iwt {
+  position: relative;
+}
+
+.iwt-basic {
+  border-radius: 3rem;
+}
+
+.vertical-image {
+  height: 39.5rem;
+  width: 100%;
+}
+
+.horizontal-image {
+  height: 13rem;
+  width: 100%;
+}
+
+.square-image {
+  height: 25rem;
+  width: 100%;
+}
+
+.overlay-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // background-color: #000;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px 20px;
+  gap: 30;
+  // border: 1px solid;
+  // box-shadow: 5px 5px white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.overlay-title {
+  font-size: 35px;
+}
+
+.overlay-desc {
+  font-size: 15px;
+}
