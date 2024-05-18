@@ -1,11 +1,11 @@
-import SideBar from '../features/ui/sidebar/sidebar';
+import SideBar from '../../features/ui/sidebar/sidebar';
 import './home.scss'
-import Searchbar from '../features/ui/searchbar/searchbar';
-import Button from '../features/ui/button/button';
+import Searchbar from '../../features/ui/searchbar/searchbar';
+import Button from '../../features/ui/button/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown, faAlignLeft, faMale, faFemale } from '@fortawesome/free-solid-svg-icons'
-import IWT from '../features/ui/image-with-text/iwt';
-import Avatar from '../features/ui/avatar/avatar';
+import IWT from '../../features/ui/image-with-text/iwt';
+import Avatar from '../../features/ui/avatar/avatar';
 
 function Home(props) {
   return (

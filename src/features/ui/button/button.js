@@ -3,15 +3,17 @@ import './button.scss'
 function Button(props) {
   return (
     <div className='button' >
-      <div className={`basic-button ${props.size || 'small'} ${props.className || 'gray'}`}>
+      <div className={`basic-button ${props.size || 'small'} ${props.color || 'gray'}`}>
         {props.icon && 
           <span className='button-icon'>{props.icon}</span>
         }
-        <div
+        {props.name && 
+          <div
           onClick={props.onClick}
           type={props.type}
-        > {props.name || "button"}
-        </div>
+          > {props.name}
+          </div>
+        }
       </div>
     </div>
   )
