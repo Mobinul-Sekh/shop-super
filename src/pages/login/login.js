@@ -26,9 +26,9 @@ export default function Login() {
             </label>
           </div>
           <br></br>
-          <button className='login-button' type='submit' formMethod='post'>Login</button>
+          <button className='login-button' type='submit' formMethod='post'>Log In</button>
           <div className='other-login-text'>
-            <p>Or login with</p>
+            <p>Or continue with</p>
           </div>
           <div className='other-login-buttons'>
             <Button size='medium' icon=<Icon path={mdiGoogle} size={1} color='black' /> />
@@ -36,7 +36,7 @@ export default function Login() {
             <Button size='medium' icon=<Icon path={mdiFacebook} size={1} color='black' /> />
           </div>
           <div className='signup-option'>
-            <p>Don't have an account yet?<a href='#'> Signup Now</a></p>
+            <p>Don't have an account yet? <a href='#'>Signup Now</a></p>
           </div>
         </div>
       </form>
