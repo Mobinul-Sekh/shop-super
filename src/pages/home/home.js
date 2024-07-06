@@ -1,26 +1,17 @@
 import './home.scss'
-import Searchbar from '../../components/searchbar/searchbar'
 import Button from '../../components/button/button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartArrowDown, faAlignLeft, faMale, faFemale } from '@fortawesome/free-solid-svg-icons'
-import Avatar from '../../components/avatar/avatar'
+import { faAlignLeft, faMale, faFemale } from '@fortawesome/free-solid-svg-icons'
 import SideBar from 'src/components/sidebar/sidebar'
 import ProductCard from 'src/components/product-card/product-card'
+import Header from 'src/components/header/header'
 
 function Home(props) {
   return (
     <>
       <SideBar />
       <div className='home-page'>
-        <section className='header-section'>
-          <div className='search-bar'>
-            <Searchbar placeholder='Search Brands, Products and More' />
-          </div>
-          <div className='cart-container'>
-            <Button name='cart' size='small' icon=<FontAwesomeIcon icon={faCartArrowDown} color='gray' /> />
-            <Avatar profilePicture='images/pp.jpeg'></Avatar>
-          </div>
-        </section>
+        <Header />
         <section className='secondary-header-section'>
           <div className='page-heading'>{`${props.pageHeading || 'Explore'}`}</div>
           <div className='middle-three-button'>

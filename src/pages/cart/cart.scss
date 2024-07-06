@@ -8,10 +8,11 @@
 .cart-page {
   height: 100vh;
   background-color: #8CDFC3;
+  padding: 20px 20px 0 0;
 }
 
 .cart-page-body {
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
 
   h2 {
@@ -28,7 +29,7 @@
     flex: 3.5;
 
     > .cart-items-container {
-      min-height: 90vh;
+      min-height: 88vh;
       margin-left: 10rem;
       margin-right: 2rem;
       border-radius: 1rem;

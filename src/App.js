@@ -4,6 +4,8 @@ import Home from './pages/home/home';
 import Signup from './pages/signup/signup';
 import Login from './pages/login/login';
 import Cart from './pages/cart/cart';
+import ProductDetails from './pages/product-details/product-details';
+import Header from './components/header/header';
 
 
 function App() {
@@ -17,8 +19,10 @@ function App() {
     //   </Routes>
     // </Router>
     <>
-      <Home/>
-      {/* <Cart/> */}
+      {/* <Header/> */}
+      {/* <ProductDetails/> */}
+      {/* <Home/> */}
+      <Cart/>
       {/* <Login/> */}
       {/* <Signup/> */}
     </>

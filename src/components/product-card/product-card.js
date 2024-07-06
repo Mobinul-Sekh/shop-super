@@ -2,9 +2,6 @@ import React from 'react'
 import './product-card.scss'
 
 function ProductCard(props) {
-  console.log('\n\n','='.repeat(120), '\n');
-  console.log(props);
-  console.log('\n','='.repeat(120), '\n\n');
   return (
     <div className='product-card'>
       <img className='product-image' src={props.productImageSrc || 'images/image-product-1.png'} alt='image'/>

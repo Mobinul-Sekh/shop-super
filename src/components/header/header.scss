@@ -1,0 +1,16 @@
+.header-section {
+  display: flex;
+  justify-content: space-between;
+
+  .search-bar {
+    flex: 9;
+    text-align: center;
+  }
+
+  .cart-container {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    gap: 10px;
+  }
+}

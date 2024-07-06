@@ -1,5 +1,5 @@
-export * from './home(rejected)'
 export * from './login'
 export * from './signup'
 export * from './cart'
 export * from './home'
+export * from './product-details'
