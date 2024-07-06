@@ -1,8 +1,8 @@
 import './cart.scss'
 import { useState } from 'react'
 // import Searchbar from '../../features/ui/searchbar/searchbar'
-import SideBar from '../../features/ui/sidebar/sidebar'
-import CartCard from '../../features/ui/cart-card/cart-card'
+import SideBar from '../../components/sidebar/sidebar'
+import CartCard from '../../components/cart-card/cart-card'
 
 export default function Cart() {
   const [ selectedPaymentOption, setSelectedPaymentOption ] = useState('1');

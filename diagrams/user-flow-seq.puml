@@ -1,0 +1,20 @@
+@startuml UserFlow
+participant user
+participant loginScreen
+participant homeScreen
+participant cartScreen
+participant paymentScreen
+user -> loginScreen : opens the app
+loginScreen -> homeScreen : user login
+homeScreen -> homeScreen : exploring products
+homeScreen -> homeScreen : searching products
+homeScreen -> homeScreen : filtering products
+homeScreen -> homeScreen : adding products to the cart
+homeScreen -> cartScreen : going to cart screen
+cartScreen -> paymentScreen : going for payment
+paymentScreen -> paymentScreen : choosing payment options
+paymentScreen -> paymentScreen : making payment
+paymentScreen --> cartScreen : payment successful
+cartScreen --> homeScreen : explore more or exit
+homeScreen --> user : exiting
+@enduml

@@ -1,6 +1,6 @@
 import Icon from '@mdi/react'
 import { mdiGoogle, mdiGithub, mdiFacebook } from '@mdi/js'
-import Button from '../../features/ui/button/button'
+import Button from '../../components/button/button'
 import './login.scss'
 
 export default function Login() {

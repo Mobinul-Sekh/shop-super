@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.product-card {
+  .product-title, .product-desc {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+  }
+
+  .product-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .product-desc {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
