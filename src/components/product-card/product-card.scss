@@ -8,6 +8,9 @@
 .product-card {
   .product-image {
     cursor: pointer;
+    height: 400px;
+    width: 312px;
+    object-fit: cover;
   }
 
   .product-image:hover {
@@ -28,6 +31,10 @@
   .product-desc {
     display: flex;
     justify-content: space-between;
+  }
+
+  .product-price {
+    font-weight: 600;
   }
 
   @keyframes forward {

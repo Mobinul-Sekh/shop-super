@@ -4,6 +4,7 @@ import Button from "../button/button"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 import './header.scss'
+import { Link } from "react-router-dom"
 
 
 function Header() {
@@ -13,8 +14,8 @@ function Header() {
         <Searchbar placeholder='Search Brands, Products and More' />
       </div>
       <div className='cart-container'>
-        <Button name='cart' size='small' icon=<FontAwesomeIcon icon={faCartArrowDown} color='gray' /> />
-        <Avatar profilePicture='images/pp.jpeg'></Avatar>
+        <Link to={'/cart'} style={{textDecoration: 'none'}}><Button name='cart' size='small' icon=<FontAwesomeIcon icon={faCartArrowDown} color='gray' /> /></Link>
+        <Avatar profilePicture='images/default-avatar.png'></Avatar>
       </div>
     </div>
   )

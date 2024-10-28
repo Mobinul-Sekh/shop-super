@@ -5,8 +5,48 @@ import { faAlignLeft, faMale, faFemale } from '@fortawesome/free-solid-svg-icons
 import SideBar from 'src/components/sidebar/sidebar'
 import ProductCard from 'src/components/product-card/product-card'
 import Header from 'src/components/header/header'
+import { useEffect, useState } from 'react'
 
 function Home(props) {
+  const [productData, setProductData] = useState([])
+  const [infiniteProducts, setInfiniteProducts] = useState([]);
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    setLoading(true)
+    fetch('https://fakestoreapi.com/products')
+    .then(res => res.json())
+    .then(
+      (result) => {
+        setProductData(result)
+        setInfiniteProducts(result);
+        setLoading(false)
+      },
+      (error) => {
+        setError(error)
+        setLoading(false)
+      }
+    )
+  }, [])
+
+  useEffect(() => {
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [loading]);
+
+  const handleScroll = () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+    // Check if the user has scrolled close to the bottom of the page
+    if (scrollHeight < 25000 && scrollTop + clientHeight >= scrollHeight - 5 && !loading) {
+      setInfiniteProducts((prevProducts) => [...prevProducts, ...productData]);
+    }
+  };
+
   return (
     <>
       <SideBar />
@@ -24,12 +64,13 @@ function Home(props) {
         <hr/>
         <section className='product-section'>
           {
-            [...Array(8).keys()].map((i) => (
-              <div className='product {i}'>
-                <ProductCard productImageSrc={`images/image-product-${i}.png`} />
+            infiniteProducts.map((product) => (
+              <div className='product'>
+                <ProductCard productData={product} />
               </div>
             ))
           }
+          {loading && <p>Loading more products...</p>}
         </section>
       </div>
     </>
