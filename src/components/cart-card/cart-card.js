@@ -7,7 +7,7 @@ import Button from '../button/button'
 
 export default function CartCard(props) {
   const [qtyValue, setQtyValue] = useState(1);
-  const total = parseInt(props.productPrice)*(qtyValue);
+  const total = Number(props.productPrice)*(qtyValue);
   
   function handleQtyChange(qty) {
     setQtyValue(qty);
@@ -16,10 +16,10 @@ export default function CartCard(props) {
   return (
     <div className='cart-card'>
       <div className='cart-card-image-details'>
-        <img className='cart-card-image' src='images/dummy-cart-image.jpeg' alt='image'/>
+        <img className='cart-card-image' src={props.productImage || 'images/dummy-cart-image.jpeg'} alt='image'/>
         <div className='cart-card-item-details'>
           <p className='cart-card-item-name'>{props.productName}</p>
-          <p className='cart-card-item-detail'>{props.productDetails}</p>
+          <p className='cart-card-item-category'>{props.productCategory}</p>
         </div>
       </div>
       <div className='cart-card-item-qty'>

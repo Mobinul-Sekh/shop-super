@@ -15,12 +15,12 @@ function Home(props) {
 
   useEffect(() => {
     setLoading(true)
-    fetch('https://fakestoreapi.com/products')
+    fetch(`http://localhost:5000/product/findAll`)
     .then(res => res.json())
     .then(
       (result) => {
-        setProductData(result)
-        setInfiniteProducts(result);
+        setProductData(result.data)
+        setInfiniteProducts(result.data);
         setLoading(false)
       },
       (error) => {
@@ -64,7 +64,7 @@ function Home(props) {
         <hr/>
         <section className='product-section'>
           {
-            infiniteProducts.map((product) => (
+            infiniteProducts && infiniteProducts.map((product) => (
               <div className='product'>
                 <ProductCard productData={product} />
               </div>

@@ -1,12 +1,36 @@
 import './cart.scss'
-import { useState } from 'react'
-// import Searchbar from '../../features/ui/searchbar/searchbar'
+import { useEffect, useState } from 'react'
 import SideBar from '../../components/sidebar/sidebar'
 import CartCard from '../../components/cart-card/cart-card'
 import Header from 'src/components/header/header';
 
 export default function Cart() {
   const [ selectedPaymentOption, setSelectedPaymentOption ] = useState('1');
+  const [cartProducts, setCartProducts] = useState([]);
+
+  const fetchCartProducts = async () => {
+    await fetch('http://localhost:5000/cart/findAll', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(
+      (result) => {
+        console.log(result)
+        setCartProducts(result.data)
+      },
+      (error) => {
+        console.log(error)
+        throw new Error("Some Error Occurred")
+      }
+    )
+  }
+
+  useEffect(() => {
+    fetchCartProducts();
+  }, [])
 
   function handleSelectedPaymentOption(option) {
     setSelectedPaymentOption(option)
@@ -32,12 +56,19 @@ export default function Cart() {
                 <p></p>
               </div>
               <ul className='cart-items'>
-                <li className='cart-item'>
-                  <CartCard productName="Product Name" productDetails="Product Details" productPrice="100"/>
-                </li>
-                <li className='cart-item'>
-                  <CartCard productName="Product Name" productDetails="Product Details" productPrice="100"/>
-                </li>
+                {
+                  cartProducts.map((product) => {
+                    return (
+                      <li className='cart-item'>
+                        <CartCard
+                          productImage={product.productImage}
+                          productName={product.productName}
+                          productCategory={product.productCategory}
+                          productPrice={product.productTotalPrice}/>
+                      </li>
+                    )
+                  })
+                }
               </ul>
             </div>
           </section>

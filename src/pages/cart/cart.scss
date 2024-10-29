@@ -45,7 +45,7 @@
       }
 
       .cart-items-heading {
-        margin: 0 20px;
+        margin: 0 20px 10px 20px;
         display: flex;
         justify-content: space-between;
         padding-top: 10px;
@@ -71,6 +71,8 @@
 
       .cart-items {
         padding: 0;
+        overflow-y: scroll;
+        max-height: 75vh;
 
         .cart-item {
           margin: 10px;
