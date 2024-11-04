@@ -4,11 +4,12 @@ import SideBar from 'src/components/sidebar/sidebar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function ProductDetails() {
   const navigate = useNavigate();
+  const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
 
   const location = useLocation();
   const { productData } = location.state || {};
@@ -36,6 +37,10 @@ function ProductDetails() {
     .then(
       (result) => {
         console.log(result)
+        alert(result.message)
+        if (result.success) {
+          setIsProductAddedToCart(true)
+        }
       },
       (error) => {
         console.log(error)
@@ -54,17 +59,20 @@ function ProductDetails() {
       <div className='product-details-page'>
         <Header />
         <div className='product-details'>
-          <img src={productData.image || 'images/image-product-1.png'} alt='image'/>
+          <img src={productData.image || 'images/image-product-1.png'} alt='product'/>
           <section className='details-section'>
             <div className='details-container'>
               <p className='product-title'>{ productData.title }</p>
               <p className='product-desc'>{ productData.description }</p>
-              <p className='product-rating'>{ productData.rating.rate } <FontAwesomeIcon icon={faStar} size='xs' /></p>
+              <div className='rating-container'>
+                <p className='product-rating'>{ productData.rating.rate } <FontAwesomeIcon icon={faStar} size='xs' /></p>
+                <p className='product-rating-count'>{productData.rating.count} Ratings</p>
+              </div>
               <p className='product-price'>${ productData.price }</p>
             </div>
             <div className='action-buttons'>
               { 
-                productData.isAddedToCart ?
+                isProductAddedToCart ?
                 <button onClick={handleGoToCart}>Go to Cart</button>
                 :
                 <button type='submit' formMethod='post' onClick={addProductToCart}>Add to Cart</button> 

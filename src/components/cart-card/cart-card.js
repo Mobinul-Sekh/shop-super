@@ -16,7 +16,7 @@ export default function CartCard(props) {
   return (
     <div className='cart-card'>
       <div className='cart-card-image-details'>
-        <img className='cart-card-image' src={props.productImage || 'images/dummy-cart-image.jpeg'} alt='image'/>
+        <img className='cart-card-image' src={props.productImage || 'images/dummy-cart-image.jpeg'} alt='cart-product'/>
         <div className='cart-card-item-details'>
           <p className='cart-card-item-name'>{props.productName}</p>
           <p className='cart-card-item-category'>{props.productCategory}</p>

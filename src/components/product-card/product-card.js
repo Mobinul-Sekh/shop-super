@@ -13,7 +13,7 @@ function ProductCard({productData}) {
       <img 
         className='product-image' 
         src={productData.image || 'images/image-product-1.png'} 
-        alt='image'
+        alt='product'
         onClick={handleProductClick}
       />
       <p className='product-title'>{productData.title || 'Product Title'}</p>

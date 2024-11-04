@@ -42,15 +42,25 @@
       margin-top: 15px;
     }
 
-    .product-rating {
+    .rating-container {
+      display: flex;
+      gap: 10px;
       margin-top: 10px;
       margin-bottom: 30px;
-      font-size: 15px;
-      border: 1px solid black;
-      width: max-content;
-      background-color: green;
-      color: white;
-      border-radius: 3px;
+      
+      .product-rating {
+        font-size: 15px;
+        border: 1px solid black;
+        width: max-content;
+        background-color: green;
+        color: white;
+        border-radius: 3px;
+      }
+  
+      .product-rating-count {
+        align-self: center;
+        color: grayscale($color: #4d3b3b);
+      }
     }
 
     .product-price {

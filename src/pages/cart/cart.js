@@ -44,7 +44,7 @@ export default function Cart() {
         <div className='cart-page-body'>
           <section className='left-section'>
             <div className='cart-items-container'>
-              <h2>Products in your cart</h2>
+              <h2>Your cart</h2>
               <hr></hr>
               <div className='cart-items-heading'>
                 <div className='adjust-flex-container'>
@@ -104,16 +104,16 @@ export default function Cart() {
               <hr></hr>
               <ul className='payment-options-details'>
                 <li onClick={() => handleSelectedPaymentOption('1')} className={`payment-options-items ${selectedPaymentOption === '1' ? 'payment-option-selected' : ''}`}>
-                  <img src='images/google-pay.png' alt='image' />
+                  <img src='images/google-pay.png' alt='payment-method-img' />
                 </li>
                 <li onClick={() => handleSelectedPaymentOption('2')} className={`payment-options-items ${selectedPaymentOption === '2' ? 'payment-option-selected' : ''}`}>
-                  <img src='images/paytm.png' alt='image' />
+                  <img src='images/paytm.png' alt='payment-method-img' />
                 </li>
                 <li onClick={() => handleSelectedPaymentOption('3')} className={`payment-options-items ${selectedPaymentOption === '3' ? 'payment-option-selected' : ''}`}>
-                  <img src='images/debit-card.png' alt='image' />
+                  <img src='images/debit-card.png' alt='payment-method-img' />
                 </li>
                 <li onClick={() => handleSelectedPaymentOption('4')} className={`payment-options-items ${selectedPaymentOption === '4' ? 'payment-option-selected' : ''}`}>
-                  <img src='images/bitcoin.png' alt='image' />
+                  <img src='images/bitcoin.png' alt='payment-method-img' />
                 </li>
               </ul>
               <button className='payment-options-button' type='submit' formMethod='post'>Check Out</button>
